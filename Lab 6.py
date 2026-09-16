@@ -92,5 +92,58 @@ print("passes: ", score_pass, " failed:", score_fail)
 
 #1 
 
-squares_dictionary = {x: x**2 for x in range(1,11)} 
+squares_dictionary = {number: number**2 for number in range(1,11)} 
 print(squares_dictionary)
+
+#2
+words = [
+    "apple", "banana", "computer"
+]
+
+word_lenght = {word: len(word) for word in words}
+print(word_lenght)
+
+#3
+
+set_words = [
+    "Apple", "BANana", "coMPuter, apple, banana, Computer"
+]
+
+word_lower = {word.lower() for word in set_words}
+print(word_lower)
+
+#4
+
+products = {
+    "apple" : 5, 
+    "banana" : 8, 
+    "computer" : 20,
+     "coffee" : 7, 
+     "guitar" : 15, 
+     "window" : 10
+}
+
+below_products = { product: price for product, price in products.items() if price < 10 }
+print(below_products)
+
+#5
+
+students = [
+    {
+        "name": "alma",
+        "score" : 75   
+    },
+
+    {
+        "name":"bert",
+        "score" : 55   
+    }
+]
+
+student_status = {student["name"]:"pass" if student["score"] >= 70 else "fail" 
+                  for student in students
+                  }
+
+print(student_status)
+
+#part C
