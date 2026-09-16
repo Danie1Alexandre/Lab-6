@@ -1,0 +1,96 @@
+#part A - List Comprehensions
+#1
+Numbers = list(range(1, 21)) 
+squared_numbers=[]
+
+for number in Numbers:
+    squared_numbers.append(number ** 2) # ** power of
+print("normal", squared_numbers)
+
+squared_comprehension = [number ** 2 for number in Numbers]
+
+print("com", squared_comprehension)
+
+#2
+
+even_numbers = [number for number in range(1, 101) if number % 2 == 0]
+
+print(even_numbers)
+
+
+#3
+
+names = [ "alice", "liam", "maja"]
+
+title_names = [name.strip().title() for name in names]
+
+print(title_names)
+
+#4
+
+
+scores = [45, 88, 92, 31, 75, 60, 49, 95]
+
+passing_scores = [score for score in scores if score >= 70]
+
+print(passing_scores)
+
+# 5
+
+pass_or_fail = ["PASS" if score >= 70 else "FAIL" for score in scores]
+
+print(pass_or_fail)
+
+#6
+
+languages = ["Python", "JavaScript", "C++", "Java"]
+# word_biger_then_5 = 0
+
+# for lang in languages:
+#     if len(lang) > 5:
+#         word_biger_then_5 +=1
+# print(word_biger_then_5)
+
+word_biger_then_5 = [langue for langue in languages if len(langue) > 5]
+print(word_biger_then_5)
+print(len(word_biger_then_5))
+
+study_hours = {
+    "Math": 15,
+    "Python": 25,
+    "English": 10,
+}
+
+# total_hours_loop = 0
+# for hours in study_hours.values():
+#     total_hours_loop += hours
+
+# print("Total:", total_hours_loop)
+
+study_hours_total= sum ([hour for hour in study_hours.values()])
+
+print(study_hours_total)
+
+# score = int(input("type a score"))
+scores =[10, 34, 86, 73, 45, 23]
+# passes = 0
+# failed= 0
+
+# for score in scores:
+#     if score >= 70:
+#         passes +=1
+#     elif score < 70:
+#         failed +=1
+# print("passes: ", passes," failed:", failed)
+
+score_pass = len([score for score in scores if score >=70])
+score_fail = len([score for score in scores if score <70])
+
+print("passes: ", score_pass, " failed:", score_fail)
+
+# Part B - Dictionary and set comprehensions
+
+#1 
+
+squares_dictionary = {x: x**2 for x in range(1,11)} 
+print(squares_dictionary)
