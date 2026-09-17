@@ -200,4 +200,38 @@ for index, fruit in enumerate(fruits):
     print(index, fruit)
 
 #part D zip and unpacking
-    
+
+#1---------------
+fruits = ["apple", "banana", "orange"]
+scores =[10, 34, 86, ]
+
+for fruit, score in zip(fruits, scores):
+    print(fruit,score)
+
+#2----------------
+
+fruit_score = {fruit: score for fruit, score in  zip(fruits, scores) }
+print(fruit_score)
+print (type(fruit_score))
+
+#3
+
+names = ["Laptop", "Smartphone", "Headphones", "Keyboard"]
+
+prices = [8999, 4999, 799, 450,456]
+
+stocks = [12, 25, 0, 8]
+
+for name,price, stock in zip( names, prices, stocks):
+    print("name: ", name,"price: ", price, "stock", stock)
+
+#catalog = {"product": "name", "prices": 0, "stock": 0 for "product": "name", "prices": 0, "stock":}
+
+# 4 
+#if you add extra itmes in one list, does extra values will be ingnored
+#or you could say only the lenght of the shortest list will be used
+prices_ex = [8999, 4999, 799, 450,456] # 5 values
+
+stocks_ex = [12, 25, 0, 8] # 4 values
+
+#5
