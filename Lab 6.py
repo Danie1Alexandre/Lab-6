@@ -146,4 +146,58 @@ student_status = {student["name"]:"pass" if student["score"] >= 70 else "fail"
 
 print(student_status)
 
-#part C
+#part C enumarate
+
+#1
+songs = [
+    "Blinding Lights",
+    "Shape of You",
+    "Bohemian Rhapsody",
+    "Billie Jean",
+    "Stayin' Alive",
+    "Hotel California",
+    "Rolling in the Deep",
+    "Dance Monkey",
+    "Smells Like Teen Spirit",
+    "Hey Jude"
+]
+
+for index, song in enumerate(songs,start=1):
+    print(index, song)
+
+
+# 2
+    
+tasks = [
+    "Buy groceries",
+    "Clean the kitchen",
+    "Answer emails",
+    "Study Python",
+    "Go for a run"
+]
+    
+for index, task in enumerate (tasks, start=1):
+    print(f"Task {index}: {task}")
+
+# 3 
+scores =[10, 34, 86, 73, 45, 23]
+threshold = 40
+
+value_above_treshold = [index for index , score in enumerate (scores, start = 1 ) if score > threshold]
+print(value_above_treshold)
+
+#4
+
+fruits = ["apple", "banana", "orange"]
+
+for fruit_index in range(len(fruits)):
+    fruit = fruits[fruit_index]  
+    print(fruit_index, fruit)
+
+for index, fruit in enumerate(fruits): 
+    # A simple enumerate is slightly shorter/more readabel code then for loop
+    # 1 line of code vs 2
+    print(index, fruit)
+
+#part D zip and unpacking
+    
